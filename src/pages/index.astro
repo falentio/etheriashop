@@ -1,0 +1,17 @@
+---
+import "../styles/global.css";
+import { Shop } from "../components/Shop";
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>EtheriaShop - Premium Products</title>
+	</head>
+	<body class="min-h-screen bg-background">
+		<Shop client:load />
+	</body>
+</html>
