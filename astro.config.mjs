@@ -8,10 +8,17 @@ import react from '@astrojs/react';
 // https://astro.build/config
 export default defineConfig({
   vite: {
-    plugins: [tailwindcss()]
+    plugins: [tailwindcss()],
+    resolve: {
+      alias: {
+        ...(import.meta.env.PROD ? { "react-dom/server": "react-dom/server.edge" } : {}),
+      }
+    }
   },
 
   output: "server",
-  adapter: cloudflare(),
+  adapter: cloudflare({
+    imageService: "passthrough"
+  }),
   integrations: [react()]
 });
