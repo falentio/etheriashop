@@ -15,7 +15,7 @@ export function Layout({ children }: LayoutProps) {
             <a href="/" className="hover:text-primary">Products</a>
             <a href="/" className="hover:text-primary">About</a>
             */}
-            <a href="https://facebook.com/falentio" className="hover:text-primary">Contact</a> 
+            <a href="https://facebook.com/kevin.falentio" className="hover:text-primary">Contact</a> 
           </nav>
         </div>
       </header>

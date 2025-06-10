@@ -37,9 +37,11 @@ console.log(sold)
           <CardDescription className="line-clamp-1">{description}</CardDescription>
         </CardHeader>
         <CardFooter>
-          <Button className="w-full" disabled={sold}>
-            <MessageCircle className="mr-2 h-4 w-4" />
-            {sold ? "Sold Out" : "Contact Seller"}
+          <Button className="w-full" disabled={sold} asChild>
+            <a href="https://facebook.com/kevin.falentio">
+                <MessageCircle className="mr-2 h-4 w-4" />
+                {sold ? "Sold Out" : "Contact Seller"}
+            </a>
           </Button>
         </CardFooter>
         {sold && (
